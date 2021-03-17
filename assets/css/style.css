@@ -10,7 +10,7 @@ html {
 
 #date_val{
     /* margin-top: 1px; */
-    font-size: 30px;
+    font-size: 40px;
     color: rgb(69, 80, 100);
     font-weight: bold;
     font-family: "ComoW01-Bold";
@@ -18,7 +18,7 @@ html {
 
 #days_val{
     /* margin-top: 100px; */
-    font-size: 25px;
+    font-size: 18px;
     color: rgb(69, 80, 100);
     font-weight: bold;
     font-family: "ComoW01-Bold";
