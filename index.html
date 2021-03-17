@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ALHOSN UAE</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/ui.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/assets/images/492x0w.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#567376">
+    <meta name="theme-color" content="#567376">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="assets/js/long-press-event.js"></script>
+    <title></title>
+</head>
+<body class="dock-item" data-long-press-delay="5000">
+    <div class="container center">
+        <div id="date-div">
+            <font class="center" id="date_val">12 March 2021</font>
+        </div>
+        <div id="days-div">
+            <font class="center" id="days_val">PCR Negative for 2 days</font>
+        </div>
+        <div id="qr-div">
+            <font class="center" id="qr">QR will be updated in <span id="time">10:00</span></font>
+        </div>
+    </div>
+
+    <!-- 10 min countdown -->
+    <script>
+        function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10)
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.text(minutes + ":" + seconds);
+
+            if (--timer < 0) {
+                timer = duration;
+            }
+        }, 1000);
+    }
+
+    jQuery(function ($) {
+        var fiveMinutes = 60 * 10,
+            display = $('#time');
+        startTimer(fiveMinutes, display);
+        });
+        </script>
+
+        <script>
+            var pressTimer;
+
+    $("a").mouseup(function(){
+    clearTimeout(pressTimer);
+    // Clear timeout
+    return false;
+    }).mousedown(function(){
+    // Set timeout
+    pressTimer = window.setTimeout(function() {
+        alert('long press detected')
+    },1000);
+    return false; 
+    });
+    </script>
+
+    <script>
+        // retrieve date and days from local storage
+        formated_date = localStorage.getItem('m_formated_date')
+        days = localStorage.getItem('m_days')
+        days_str = `PCR Negative for ${days} days`
+        console.log(formated_date, days)
+
+        // Update date and days val
+        document.getElementById('date_val').innerText = formated_date;
+        document.getElementById('days_val').innerText = days_str;
+    </script>
+
+    <script>
+
+        window.onload = function() {
+
+            document.addEventListener('long-press', function(e) {
+
+                e.preventDefault();
+                window.open("/set-date-days.html","_self")
+                // e.target.setAttribute('data-editing', 'true');
+            });
+
+            document.addEventListener('click', function(e) {
+                console.log(e.type);
+            })
+        }
+    </script>
+</body>
+</html>

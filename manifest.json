@@ -1,0 +1,26 @@
+{
+    "name": "ALHOSN UAE",
+    "short_name": "ALHOSN UAE",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#567376",
+    "theme_color": "#567376",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/assets/images/230x0w.png",
+            "type": "image/png",
+            "sizes": "230x230"
+        },
+        {
+            "src": "/assets/images/434x0w.png",
+            "type": "image/png",
+            "sizes": "434x434"
+        },
+        {
+            "src": "/assets/images/492x0w.png",
+            "type": "image/png",
+            "sizes": "492x492"
+        }
+    ]
+}
