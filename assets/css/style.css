@@ -1,7 +1,7 @@
 @font-face {font-family: "ComoW01-Bold"; src: url("//db.onlinewebfonts.com/t/d04ad15ef66bc1f1295f87feee19dee2.eot"); src: url("//db.onlinewebfonts.com/t/d04ad15ef66bc1f1295f87feee19dee2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/d04ad15ef66bc1f1295f87feee19dee2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/d04ad15ef66bc1f1295f87feee19dee2.woff") format("woff"), url("//db.onlinewebfonts.com/t/d04ad15ef66bc1f1295f87feee19dee2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/d04ad15ef66bc1f1295f87feee19dee2.svg#ComoW01-Bold") format("svg"); }
 
 html { 
-    background: url('/assets/images/no-txtt.png') no-repeat center center fixed; 
+    background: url('/assets/images/no-txttt.png') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
