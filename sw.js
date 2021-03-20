@@ -6,11 +6,11 @@ const assets = [
   '/assets/js/long-press-event.js',
   '/assets/css/style.css',
   '/assets/images/492x0w.png',
+  '/assets/css/Como-W01-Bold.ttf',
   'https://fonts.googleapis.com/css?family=Lato:300,400,700',
   'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css',
   'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js',
   'https://code.jquery.com/jquery-3.5.1.min.js',
-  '//db.onlinewebfonts.com/c/d04ad15ef66bc1f1295f87feee19dee2?family=ComoW01-Bold',
   'https://code.jquery.com/jquery-3.5.1.min.js',
 ];
 // install event
